@@ -1,0 +1,37 @@
+{
+  "id": "1487699",
+  "name": "Mublog",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "212783",
+      "name": "start",
+      "font_class": "start",
+      "unicode": "ea40",
+      "unicode_decimal": 59968
+    },
+    {
+      "icon_id": "681192",
+      "name": "排序箭头下",
+      "font_class": "paixujiantouxia",
+      "unicode": "e74d",
+      "unicode_decimal": 59213
+    },
+    {
+      "icon_id": "4165989",
+      "name": "喇叭",
+      "font_class": "laba",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6806861",
+      "name": "Pause",
+      "font_class": "Pause",
+      "unicode": "eb79",
+      "unicode_decimal": 60281
+    }
+  ]
+}

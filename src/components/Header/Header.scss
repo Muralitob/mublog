@@ -1,0 +1,396 @@
+@import '../../Layouts/index.scss';
+
+.header {
+  position: relative;
+  overflow: hidden;
+  .godown {
+    display: none;
+    @include tablet-min {
+      display: block;
+      position: absolute;
+      font-size: 48px;
+      bottom: 80px;
+      opacity: 0;
+      left: 50%;
+      transform: translate(-50%);
+      animation: down 500ms ease infinite, fadeIn 1s ease forwards ;
+      animation-delay: 3000ms;
+    }
+  }
+  .muted {
+    display: none;
+    @include tablet-min {
+      display: block;
+      font-size: 36px;
+      position: fixed;
+      right: 60px;
+      top: 50%;
+      z-index: 10;
+    }
+  }
+  @keyframes down {
+    0% {
+      bottom: 80px;
+    }
+    10% {
+      bottom: 76px;
+    }
+    20% {
+      bottom: 72px;
+    }
+    30% {
+      bottom: 68px;
+    }
+    40% {
+      bottom: 64px;
+    }
+    50% {
+      bottom: 60px;
+    }
+    60% {
+      bottom: 64px;
+    }
+    70% {
+      bottom: 68px;
+    }
+    80% {
+      bottom: 72px;
+    }
+    90% {
+      bottom: 76px;
+    }
+    100% {
+      bottom: 80px;
+    }
+  }
+  .banner {
+    .layer {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    .continue-img {
+      display: none;
+      @include tablet-min {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // background: url('../assets/jojo/continued.png') no-repeat left bottom;
+        background-size: cover;
+        z-index: 50;
+        position: absolute;
+        right: -100%;
+        bottom: 0;
+      }
+    }
+    .slide-right {
+      animation: slideIn 500ms ease forwards;
+      animation-delay: 3500ms;
+    }
+    @keyframes slideIn {
+      from {
+        right: -100%;
+      }
+      to {
+        right: 0;
+      }
+    }
+    .cache-img {
+      width: 100%;
+      height: 100%;
+    }
+    &-bg {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background: url('http://muralito.top/complete.jpg') !important ;
+    }
+    .mute-btn {
+      position: fixed;
+      right: 48px;
+      top: 50%;
+      font-size: 48px;
+    }
+    .fadein {
+      animation: fadeIn 1s ease forwards ;
+      animation-delay: 2000ms;
+    }
+    .p {
+      display: none;
+      @include tablet-min {
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+    .p3 {
+      width: 100%;
+      height: 100%;
+      // background: url('../assets/jojo/Wamuu.png') 50% 50%;
+      background-size: cover;
+      opacity: 0;
+    }
+    .p2 {
+      width: 100%;
+      height: 100%;
+      // background: url('../assets/jojo/Kars.png') 50% 50%;
+      background-size: cover;
+      opacity: 0;
+    }
+    
+    .word {
+      opacity: 0;
+      @include tablet-min {
+        &-shake {
+          animation: shakeFont 1s ease infinite, fadeIn 1s ease forwards ;
+          animation-delay: 2500ms;
+          opacity: 0;
+        }
+        &-left {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          margin: 0 auto;
+          z-index: 10;
+          // background: url('../assets/jojo/font-left.png') 50% 50%;
+          background-size: cover;
+          
+        }
+        &-center {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          z-index: 100;
+          // background: url('../assets/jojo/font-center.png') 50% 50%;
+          background-size: cover;
+        }
+        &-right {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          z-index: 10;
+          // background: url('../assets/jojo/font-right.png') 50% 50%;
+          background-size: cover;
+        }
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes shakeFont {
+      0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+    }
+    2% {
+        -webkit-transform: translate(-1px, 1.5px) rotate(1.5deg);
+    }
+    4% {
+        -webkit-transform: translate(1.3px, 0px) rotate(-0.5deg);
+    }
+    6% {
+        -webkit-transform: translate(1.4px, 1.4px) rotate(-2deg);
+    }
+    8% {
+        -webkit-transform: translate(-1.3px, -1px) rotate(-1.5deg);
+    }
+    10% {
+        -webkit-transform: translate(1.4px, 0px) rotate(-2deg);
+    }
+    12% {
+        -webkit-transform: translate(-1.3px, -1px) rotate(-2deg);
+    }
+    14% {
+        -webkit-transform: translate(1.5px, 1.3px) rotate(1.5deg);
+    }
+    16% {
+        -webkit-transform: translate(1.5px, -1.5px) rotate(-1.5deg);
+    }
+    18% {
+        -webkit-transform: translate(1.3px, -1.3px) rotate(-2deg);
+    }
+    20% {
+        -webkit-transform: translate(1px, 1px) rotate(-0.5deg);
+    }
+    22% {
+        -webkit-transform: translate(1.3px, 1.5px) rotate(-2deg);
+    }
+    24% {
+        -webkit-transform: translate(-1.4px, -1px) rotate(2deg);
+    }
+    26% {
+        -webkit-transform: translate(1.3px, -1.3px) rotate(0.5deg);
+    }
+    28% {
+        -webkit-transform: translate(1.6px, -1.6px) rotate(-2deg);
+    }
+    30% {
+        -webkit-transform: translate(-1.3px, -1.3px) rotate(-1.5deg);
+    }
+    32% {
+        -webkit-transform: translate(-1px, 0px) rotate(2deg);
+    }
+    34% {
+        -webkit-transform: translate(1.3px, 1.3px) rotate(-0.5deg);
+    }
+    36% {
+        -webkit-transform: translate(1.3px, 1.6px) rotate(1.5deg);
+    }
+    38% {
+        -webkit-transform: translate(1.3px, -1.6px) rotate(1.5deg);
+    }
+    40% {
+        -webkit-transform: translate(-1.4px, -1px) rotate(-0.5deg);
+    }
+    42% {
+        -webkit-transform: translate(-1.4px, 1.3px) rotate(-0.5deg);
+    }
+    44% {
+        -webkit-transform: translate(-1.6px, 1.4px) rotate(0.5deg);
+    }
+    46% {
+        -webkit-transform: translate(-2.1px, -1.3px) rotate(-0.5deg);
+    }
+    48% {
+        -webkit-transform: translate(1px, 1.6px) rotate(1.5deg);
+    }
+    50% {
+        -webkit-transform: translate(1.6px, 1.6px) rotate(1.5deg);
+    }
+    52% {
+        -webkit-transform: translate(-1.4px, 1.6px) rotate(0.5deg);
+    }
+    54% {
+        -webkit-transform: translate(1.6px, -1px) rotate(-2deg);
+    }
+    56% {
+        -webkit-transform: translate(1.3px, -1.6px) rotate(-2deg);
+    }
+    58% {
+        -webkit-transform: translate(-1.3px, -1.6px) rotate(0.5deg);
+    }
+    60% {
+        -webkit-transform: translate(1.3px, 1.6px) rotate(-0.5deg);
+    }
+    62% {
+        -webkit-transform: translate(0px, 0px) rotate(-1.5deg);
+    }
+    64% {
+        -webkit-transform: translate(-1.6px, -1.6px) rotate(-2deg);
+    }
+    66% {
+        -webkit-transform: translate(1.6px, -1.6px) rotate(0.5deg);
+    }
+    68% {
+        -webkit-transform: translate(0px, -1.6px) rotate(-2deg);
+    }
+    70% {
+        -webkit-transform: translate(-1.6px, 1px) rotate(1.5deg);
+    }
+    72% {
+        -webkit-transform: translate(-1.6px, 1.6px) rotate(2deg);
+    }
+    74% {
+        -webkit-transform: translate(1.3px, -1.6px) rotate(-0.5deg);
+    }
+    76% {
+        -webkit-transform: translate(1.4px, 1px) rotate(-0.5deg);
+    }
+    78% {
+        -webkit-transform: translate(-1px, 1.4px) rotate(2deg);
+    }
+    80% {
+        -webkit-transform: translate(1.4px, 1.6px) rotate(2deg);
+    }
+    82% {
+        -webkit-transform: translate(-1.6px, -1.6px) rotate(-0.5deg);
+    }
+    84% {
+        -webkit-transform: translate(-1.4px, 1.4px) rotate(-2deg);
+    }
+    86% {
+        -webkit-transform: translate(1px, 1.4px) rotate(-2deg);
+    }
+    88% {
+        -webkit-transform: translate(-1.4px, 1.4px) rotate(-1.5deg);
+    }
+    90% {
+        -webkit-transform: translate(-1.6px, -1.6px) rotate(-2deg);
+    }
+    92% {
+        -webkit-transform: translate(-1.6px, 1.6px) rotate(2deg);
+    }
+    94% {
+        -webkit-transform: translate(-1.6px, -1.6px) rotate(-2deg);
+    }
+    96% {
+        -webkit-transform: translate(-1.4px, 1.3px) rotate(-2deg);
+    }
+    98% {
+        -webkit-transform: translate(1.3px, 1px) rotate(-0.5deg);
+    }
+    }
+
+    &-header {
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      z-index: 10;
+  
+      @include tablet-min {
+        top: 100px;
+      }
+  
+      &>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+  
+        @include tablet-min {
+          margin: 0 60px;
+          position: relative;
+        }
+      }
+    }
+  
+    #banner-title {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      text-align: center;
+      transform: translate(-50%, -50%);
+  
+      h1 {
+        // opacity: 0;
+        @include tablet-min {
+          font-size: 38px;
+        }
+        font-size: 24px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+  
+        &:after {
+          content: 'JOJOの奇妙冒险';
+          font-size: 14px;
+          display: block;
+        }
+  
+        // transform: translateY(-20px);
+        // animation: fadeFont 4s ease forwards;
+      }
+    }
+  }
+}
+.filter {
+  filter: sepia(90%);
+}

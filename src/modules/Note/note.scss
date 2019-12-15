@@ -1,0 +1,80 @@
+@import '../../Layouts/index.scss';
+
+#root {
+  background-color: #fff;
+  // position: relative;
+}
+
+.note {
+  // position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+
+  .container {
+
+    aside {
+      @include tablet-landscape-min {
+        display: block;
+        width: 240px;
+        margin-top: 218px;
+        // border: 1px solid $c-gray;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .post-about {
+          width: 100%;
+          // height: 28em;
+          position: sticky;
+          top: 60px;
+        }
+
+        .post-nav {
+          display: block;
+          position: sticky;
+          // margin-top: 10em;
+          top: 30em;
+        }
+
+      }
+
+      display: none;
+    }
+
+    article {
+
+      .title {
+        h1 {
+          font-size: 20px;
+          color: $c-black;
+          line-height: 1.3;
+          position: relative;
+          font-weight: bold;
+
+          @include tablet-min {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .stuff {}
+
+      .content {
+        &::before {
+          content: '';
+          height: 1px;
+          width: 100px;
+          background-color: #eee;
+          display: block;
+          margin: 30px auto 40px;
+          overflow: hidden;
+        }
+
+        text-align: justify;
+      }
+    }
+  }
+
+  .post-nav {}
+}
