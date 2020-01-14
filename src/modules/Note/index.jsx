@@ -4,7 +4,7 @@ import MusicBar from '../../components/MusicBar/MusicBar'
 import Tablet from '../../components/Tablet/Tablet'
 import './note.scss';
 
-export default class Home extends React.Component {
+export default class Note extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -34,6 +34,7 @@ export default class Home extends React.Component {
     let { data, tables, content } = this.state
     return (
       <div className="note">
+        111
         <MusicBar title={data.title}></MusicBar>
         <button  onClick={() => {this.props.history.push('/')}}>Go to HomePage</button>
         <main className="container">

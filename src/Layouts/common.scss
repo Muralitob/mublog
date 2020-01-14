@@ -162,9 +162,10 @@ li {
   cursor: pointer;
 }
 
+
 #root {
   width: 100%;
-  height: auto;
+  background-color: #fff;
 }
 
 #global {
@@ -280,7 +281,6 @@ ul {
 
 .main {
   flex: 1;
-
   @include desktop-min {
     display: flex;
     flex-wrap: wrap;

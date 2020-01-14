@@ -6,7 +6,12 @@
   line-height: 1.125;
 }
 
+.post-list {
+  width: 100%;
+}
+
 .block-area {
+  width: 100%;
   margin-bottom: 48px;
 }
 
@@ -14,4 +19,6 @@
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  overflow-y: hidden;
 }

@@ -5,7 +5,7 @@ function Head(props) {
   return (
     <div className="head">
       <span className="cursor logo-icon" onClick={() => {
-        props.history.push('/')
+        props.history.goBack();
       }}>JOJO</span>
     </div>
   )
